@@ -1,0 +1,51 @@
+return require('packer').startup(function(use)
+  use {'nvim-treesitter/nvim-treesitter',
+       run = ':TSUpdate'
+       }
+  use 'junegunn/fzf'
+  use 'EdenEast/nightfox.nvim'
+  use 'L3MON4D3/LuaSnip'
+  use 'chentoast/marks.nvim'
+  use 'folke/lsp-colors.nvim'
+  use 'folke/twilight.nvim'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/nvim-cmp'
+  use 'kyazdani42/nvim-tree.lua'
+  use 'kyazdani42/nvim-web-devicons'
+  use 'lewis6991/gitsigns.nvim'
+  use 'neovim/nvim-lspconfig'
+  use 'nvim-lua/plenary.nvim'
+  use 'nvim-lua/popup.nvim'
+  use 'nvim-lualine/lualine.nvim'
+  use 'nvim-telescope/telescope.nvim'
+  use 'nvim-treesitter/playground'
+  use 'phaazon/hop.nvim'
+  use 'rebelot/kanagawa.nvim'
+  use 'saadparwaiz1/cmp_luasnip'
+  use 'tpope/vim-commentary'
+  use 'tpope/vim-dispatch'
+  use 'tpope/vim-fugitive'
+  use 'tpope/vim-vinegar'
+  use 'sainnhe/sonokai'
+  use 'mhartington/oceanic-next'
+  use 'junegunn/fzf.vim'
+  use 'nanotech/jellybeans.vim'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  use 'mhinz/vim-startify'
+  use 'jupyter-vim/jupyter-vim'
+
+  use { "anuvyklack/windows.nvim",
+   requires = {
+      "anuvyklack/middleclass",
+      "anuvyklack/animation.nvim"
+   },
+   config = function()
+      vim.o.winwidth = 10
+      vim.o.winminwidth = 10
+      vim.o.equalalways = false
+      require('windows').setup()
+   end
+}
+end)
